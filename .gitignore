@@ -10,3 +10,25 @@ build
 .next
 .turbo
 coverage
+
+# React Native / Expo
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.idea/
+.gradle/
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.apk
+*.aab
+*.apks
+ios/Pods/
+ios/build/
+android/app/build/
+android/.gradle/
