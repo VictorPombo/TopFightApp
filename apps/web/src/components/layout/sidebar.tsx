@@ -8,34 +8,61 @@ import {
   Users,
   CalendarDays,
   CircleDollarSign,
-  Dumbbell,
-  LogOut
+  LogOut,
+  Camera
 } from "lucide-react";
+import { BoxingGlove } from "@/components/icons/BoxingGlove";
+
+import { Trophy, BarChart3, Settings } from "lucide-react"; // add inside the imports
 
 const routes = [
   {
-    label: "Dashboard",
+    label: "Dashboard & IA",
     icon: LayoutDashboard,
     href: "/admin",
-    color: "text-sky-500",
+    color: "text-yellow-500",
   },
   {
-    label: "Alunos",
+    label: "CRM & Vendas",
     icon: Users,
     href: "/admin/alunos",
-    color: "text-violet-500",
+    color: "text-zinc-300",
   },
   {
-    label: "Grade de Aulas",
+    label: "Grade & Check-in",
     icon: CalendarDays,
     href: "/admin/aulas",
-    color: "text-pink-700",
+    color: "text-zinc-300",
   },
   {
     label: "Financeiro",
     icon: CircleDollarSign,
     href: "/admin/financeiro",
-    color: "text-emerald-500",
+    color: "text-zinc-300",
+  },
+  {
+    label: "Recepção (QR)",
+    icon: Camera,
+    href: "/admin/scanner",
+    color: "text-zinc-300",
+  },
+  {
+    label: "Campeonatos",
+    icon: Trophy,
+    href: "/admin/campeonatos",
+    color: "text-zinc-300",
+  },
+  {
+    label: "Loja Virtual",
+    icon: LayoutDashboard, // Store icon
+    href: "/admin/loja",
+    color: "text-zinc-300",
+  },
+  {
+    label: "Relatórios & Churn",
+    icon: BarChart3,
+    href: "/admin/relatorios",
+    color: "text-zinc-300",
   },
 ];
 
@@ -46,7 +73,7 @@ export const Sidebar = () => {
     <div className="space-y-4 py-4 flex flex-col h-full bg-zinc-950 text-white border-r border-zinc-800">
       <div className="px-3 py-2 flex-1">
         <Link href="/admin" className="flex items-center pl-3 mb-14">
-          <Dumbbell className="h-8 w-8 text-yellow-500 mr-2" />
+          <BoxingGlove className="h-8 w-8 text-yellow-500 mr-2" />
           <h1 className="text-2xl font-black uppercase tracking-wider text-white">
             Fight <span className="text-yellow-500">Hub</span>
           </h1>

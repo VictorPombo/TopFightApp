@@ -32,36 +32,49 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Verifica se a rota começa com /admin ou /aluno
+  // Verifica se a rota começa com /admin, /aluno ou /onboarding
   const isAdminRoute = request.nextUrl.pathname.startsWith("/admin");
   const isAlunoRoute = request.nextUrl.pathname.startsWith("/aluno");
+  const isOnboardingRoute = request.nextUrl.pathname.startsWith("/onboarding");
 
-  if (isAdminRoute || isAlunoRoute) {
+  if (isAdminRoute || isAlunoRoute || isOnboardingRoute) {
     if (!user) {
-      // Se não estiver logado, redireciona para o login
       const url = request.nextUrl.clone();
       url.pathname = "/login";
       return NextResponse.redirect(url);
     }
 
-    // Busca a role do usuário no banco (Executa no Edge runtime sem problemas com Supabase)
+    // Busca role e academy_id do usuário
     const { data: userData } = await supabase
       .from("users")
-      .select("role")
+      .select("role, academy_id")
       .eq("id", user.id)
       .single();
 
-    const role = userData?.role || "aluno"; // Fallback para aluno
+    const role = userData?.role || "aluno";
+    const hasAcademy = !!userData?.academy_id;
+
+    // Admin/Professor sem academia → onboarding
+    if ((role === "admin" || role === "professor") && !hasAcademy && !isOnboardingRoute) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/onboarding";
+      return NextResponse.redirect(url);
+    }
+
+    // Se já tem academia e está no onboarding → admin
+    if (hasAcademy && isOnboardingRoute) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/admin";
+      return NextResponse.redirect(url);
+    }
 
     if (isAdminRoute && role === "aluno") {
-      // Aluno tentando acessar admin: joga pro portal dele
       const url = request.nextUrl.clone();
       url.pathname = "/aluno";
       return NextResponse.redirect(url);
     }
 
     if (isAlunoRoute && (role === "admin" || role === "professor")) {
-      // Admin/Professor tentando acessar aluno: joga pro admin
       const url = request.nextUrl.clone();
       url.pathname = "/admin";
       return NextResponse.redirect(url);

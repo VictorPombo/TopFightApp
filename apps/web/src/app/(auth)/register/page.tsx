@@ -7,7 +7,8 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Dumbbell, Loader2, AlertCircle, Eye, EyeOff } from "lucide-react";
+import { Loader2, AlertCircle, Eye, EyeOff } from "lucide-react";
+import { BoxingGlove } from "@/components/icons/BoxingGlove";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export default function RegisterPage() {
@@ -68,7 +69,7 @@ export default function RegisterPage() {
           
           <div className="flex flex-col items-center justify-center mb-10">
             <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-500/30 mb-4 transform hover:rotate-6 transition-transform duration-300">
-              <Dumbbell className="h-8 w-8 text-black" />
+              <BoxingGlove className="h-8 w-8 text-black" />
             </div>
             <h1 className="text-3xl font-black text-zinc-900 dark:text-white uppercase tracking-widest drop-shadow-sm">
               Criar <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-600">Conta</span>

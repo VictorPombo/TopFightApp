@@ -7,8 +7,8 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-full relative bg-slate-100">
-      <div className="hidden h-full md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 z-80 bg-slate-900">
+    <div className="h-full relative bg-zinc-50 dark:bg-[#0A0A0A] transition-colors duration-300">
+      <div className="hidden h-full md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 z-80">
         <Sidebar />
       </div>
       <main className="md:pl-72 h-full">

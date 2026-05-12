@@ -5,7 +5,8 @@ import { getClassesAction, createClassAction } from "@/actions/aulas";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, Plus, Calendar, Clock, Users, Dumbbell } from "lucide-react";
+import { Loader2, Plus, Calendar, Clock, Users } from "lucide-react";
+import { BoxingGlove } from "@/components/icons/BoxingGlove";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export default function AulasPage() {
@@ -119,7 +120,7 @@ export default function AulasPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {classes.length === 0 ? (
             <div className="col-span-full bg-white border border-zinc-200 border-dashed rounded-2xl p-12 text-center text-zinc-500">
-              <Dumbbell className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <BoxingGlove className="h-12 w-12 mx-auto mb-4 opacity-50" />
               Nenhuma aula cadastrada ainda.
             </div>
           ) : (

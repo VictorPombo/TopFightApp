@@ -1,6 +1,7 @@
 "use client";
 
-import { Dumbbell, Calendar, Home, LogOut, Ticket } from "lucide-react";
+import { Calendar, Home, LogOut, Ticket, Trophy, Store } from "lucide-react";
+import { BoxingGlove } from "@/components/icons/BoxingGlove";
 import { logoutAction } from "@/actions/auth";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -15,7 +16,7 @@ export default function AlunoLayout({
       <header className="md:hidden flex items-center justify-between p-4 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-900 sticky top-0 z-50 transition-colors">
         <div className="flex items-center gap-2">
           <div className="bg-yellow-500 p-2 rounded-lg">
-            <Dumbbell className="h-5 w-5 text-black" />
+            <BoxingGlove className="h-5 w-5 text-black" />
           </div>
           <span className="font-black tracking-widest uppercase">Fight Hub</span>
         </div>
@@ -39,13 +40,13 @@ export default function AlunoLayout({
       <aside className="hidden md:flex flex-col w-64 bg-white dark:bg-zinc-950 border-r border-zinc-200 dark:border-zinc-900 fixed h-screen p-6 transition-colors">
         <div className="flex items-center gap-3 mb-10">
           <div className="bg-yellow-500 p-2 rounded-lg shadow-lg shadow-yellow-500/20">
-            <Dumbbell className="h-6 w-6 text-black" />
+            <BoxingGlove className="h-6 w-6 text-black" />
           </div>
           <span className="font-black text-xl tracking-widest uppercase text-zinc-900 dark:text-white">Fight Hub</span>
         </div>
 
-        <nav className="flex-1 space-y-2 mt-4">
-          <a href="/aluno" className="flex items-center gap-3 bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 px-4 py-3 rounded-xl font-bold">
+        <nav className="flex-1 space-y-2 mt-4 overflow-y-auto hide-scrollbar">
+          <a href="/aluno" className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 dark:hover:text-white dark:hover:bg-zinc-900 px-4 py-3 rounded-xl font-bold transition-colors">
             <Home className="h-5 w-5" />
             Meu Perfil
           </a>
@@ -53,9 +54,17 @@ export default function AlunoLayout({
             <Calendar className="h-5 w-5" />
             Grade de Aulas
           </a>
-          <a href="/aluno/rifas" className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 dark:hover:text-white dark:hover:bg-zinc-900 px-4 py-3 rounded-xl font-bold transition-colors">
-            <Ticket className="h-5 w-5" />
-            Rifas
+          <a href="/aluno/evolucao" className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 dark:hover:text-white dark:hover:bg-zinc-900 px-4 py-3 rounded-xl font-bold transition-colors">
+            <Trophy className="h-5 w-5" />
+            Evolução
+          </a>
+          <a href="/aluno/comunidade" className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 dark:hover:text-white dark:hover:bg-zinc-900 px-4 py-3 rounded-xl font-bold transition-colors">
+            <Ticket className="h-5 w-5" /> {/* Use Ticket or another icon like MessageCircle if imported */}
+            Comunidade
+          </a>
+          <a href="/aluno/loja" className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 dark:hover:text-white dark:hover:bg-zinc-900 px-4 py-3 rounded-xl font-bold transition-colors">
+            <Store className="h-5 w-5" />
+            Loja Virtual
           </a>
         </nav>
 
