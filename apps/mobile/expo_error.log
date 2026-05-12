@@ -1,0 +1,32 @@
+The following packages should be updated for best compatibility with the installed expo version:
+  @react-native-async-storage/async-storage@3.0.2 - expected version: 2.2.0
+Your project may not work correctly until you install the expected versions of the packages.
+λ  WARN  props.pointerEvents is deprecated. Use style.pointerEvents 
+ReferenceError: window is not defined
+    at LegacyAsyncStorageWebImpl.storage (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@react-native-async-storage/async-storage/lib/module/createAsyncStorage.js:114:5)
+    at LegacyAsyncStorageWebImpl.getItem (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@react-native-async-storage/async-storage/lib/module/createAsyncStorage.js:117:17)
+    at getItemAsync (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/lib/helpers.js:130:33)
+    at SupabaseAuthClient._recoverAndRefresh (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:3818:69)
+    at SupabaseAuthClient._initialize (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:333:24)
+    at fn (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:272:35)
+    at fn (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:2277:36)
+    at SupabaseAuthClient.lock (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:33:18)
+    at SupabaseAuthClient._acquireLock (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:2273:31)
+    at /Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:271:31
+/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/expo/node_modules/@expo/cli/build/src/utils/errors.js:130
+    throw error;
+    ^
+
+ReferenceError: window is not defined
+    at LegacyAsyncStorageWebImpl.storage (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@react-native-async-storage/async-storage/lib/module/createAsyncStorage.js:114:5)
+    at LegacyAsyncStorageWebImpl.getItem (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@react-native-async-storage/async-storage/lib/module/createAsyncStorage.js:117:17)
+    at getItemAsync (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/lib/helpers.js:130:33)
+    at SupabaseAuthClient.__loadSession (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:2334:66)
+    at SupabaseAuthClient._useSession (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:2315:39)
+    at SupabaseAuthClient._emitInitialSession (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:3417:27)
+    at fn (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:3411:22)
+    at fn (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:2277:36)
+    at SupabaseAuthClient.lock (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:33:18)
+    at SupabaseAuthClient._acquireLock (/Users/hadi/Documents/TopFightApp/apps/mobile/node_modules/@supabase/auth-js/dist/main/GoTrueClient.js:2273:31)
+
+Node.js v25.9.0
