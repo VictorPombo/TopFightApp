@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fight Hub - Progress Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #09090b; /* zinc-950 */
+            color: #f4f4f5; /* zinc-50 */
+        }
+        .status-done { @apply bg-green-500/20 text-green-400 border-green-500/50; }
+        .status-doing { @apply bg-yellow-500/20 text-yellow-500 border-yellow-500/50; }
+        .status-todo { @apply bg-zinc-800 text-zinc-400 border-zinc-700; }
+    </style>
+</head>
+<body class="p-8 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-12 border-b border-zinc-800 pb-8 flex items-center justify-between">
+            <div>
+                <h1 class="text-4xl font-black uppercase tracking-widest flex items-center gap-3">
+                    <span class="text-white">Fight</span>
+                    <span class="text-yellow-500">Hub</span>
+                </h1>
+                <p class="text-zinc-400 mt-2 font-medium">Painel de Acompanhamento do Projeto</p>
+            </div>
+            <div class="text-right">
+                <span class="text-sm text-zinc-500 uppercase tracking-widest font-bold">Progresso Geral</span>
+                <div class="text-3xl font-black text-yellow-500">30%</div>
+            </div>
+        </header>
+
+        <div class="space-y-8">
+            <!-- SETUP & INFRA -->
+            <section class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                <h2 class="text-2xl font-bold mb-4 flex items-center justify-between">
+                    <span class="text-white">🚀 SETUP & INFRAESTRUTURA</span>
+                    <span class="text-sm px-3 py-1 rounded-full status-done border">CONCLUÍDO</span>
+                </h2>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3"><span class="text-green-500">✔</span> Monorepo (Web + Mobile) configurado</li>
+                    <li class="flex items-center gap-3"><span class="text-green-500">✔</span> Supabase Auth com Roles configurado</li>
+                    <li class="flex items-center gap-3"><span class="text-green-500">✔</span> Interface Web Login (Preto e Amarelo)</li>
+                    <li class="flex items-center gap-3"><span class="text-green-500">✔</span> Tela de Cadastro de Gestor Web</li>
+                    <li class="flex items-center gap-3"><span class="text-green-500">✔</span> Bloqueios de Rotas (Aluno vs Admin)</li>
+                </ul>
+            </section>
+
+            <!-- FASE 1: MVP -->
+            <section class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+                <h2 class="text-2xl font-bold mb-4 flex items-center justify-between">
+                    <span class="text-white">🎯 FASE 1: MVP RÁPIDO</span>
+                    <span class="text-sm px-3 py-1 rounded-full status-doing border">EM ANDAMENTO</span>
+                </h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-green-500 font-bold mb-2">Epic 1: Agenda e Check-in</h3>
+                        <ul class="space-y-2 ml-4 border-l border-zinc-800 pl-4">
+                            <li class="flex items-center gap-3 text-green-500 font-medium">
+                                <span class="">✔</span> Tabelas SQL (Classes, Sessions, Checkins) Criadas
+                            </li>
+                            <li class="flex items-center gap-3 text-green-500 font-medium"><span>✔</span> Tela Gestão de Grade (Web Admin) Funcional</li>
+                            <li class="flex items-center gap-3 text-green-500 font-medium"><span>✔</span> Aba de Grade e Check-in (Mobile App) Funcional</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-zinc-400 font-bold mb-2">Epic 2: Evolução Simples</h3>
+                        <ul class="space-y-2 ml-4 border-l border-zinc-800 pl-4">
+                            <li class="flex items-center gap-3 text-zinc-500"><span>⬜</span> Perfil do Aluno com Graduação (Faixa)</li>
+                            <li class="flex items-center gap-3 text-zinc-500"><span>⬜</span> Contador de treinos</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-zinc-400 font-bold mb-2">Epic 3: Pagamentos e Planos</h3>
+                        <ul class="space-y-2 ml-4 border-l border-zinc-800 pl-4">
+                            <li class="flex items-center gap-3 text-zinc-500"><span>⬜</span> Integração Mercado Pago/Stripe</li>
+                            <li class="flex items-center gap-3 text-zinc-500"><span>⬜</span> Trava de Inadimplência no Check-in</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FASE 2 -->
+            <section class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 opacity-60">
+                <h2 class="text-2xl font-bold mb-4 flex items-center justify-between">
+                    <span class="text-white">📈 FASE 2: ENGAJAMENTO</span>
+                    <span class="text-sm px-3 py-1 rounded-full status-todo border">NA FILA</span>
+                </h2>
+                <ul class="space-y-2 text-zinc-500">
+                    <li class="flex items-center gap-3"><span>⬜</span> Epic 4: Ranking e Score</li>
+                    <li class="flex items-center gap-3"><span>⬜</span> Epic 5: Portal de Notícias</li>
+                    <li class="flex items-center gap-3"><span>⬜</span> Epic 6: Coach Digital (Treino em Casa)</li>
+                </ul>
+            </section>
+
+            <!-- FASE 3 -->
+            <section class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 opacity-60">
+                <h2 class="text-2xl font-bold mb-4 flex items-center justify-between">
+                    <span class="text-white">💰 FASE 3: MONETIZAÇÃO AVANÇADA</span>
+                    <span class="text-sm px-3 py-1 rounded-full status-todo border">NA FILA</span>
+                </h2>
+                <ul class="space-y-2 text-zinc-500">
+                    <li class="flex items-center gap-3"><span>⬜</span> Epic 7: Marketplace Integrado</li>
+                    <li class="flex items-center gap-3"><span>⬜</span> Epic 8: Campeonatos e Rifas</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
