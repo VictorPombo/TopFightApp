@@ -70,7 +70,8 @@ export default function CRMAlunosPage() {
 
       {/* Lista de Alunos */}
       <div className="bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] overflow-hidden shadow-sm">
-        <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse whitespace-nowrap">
           <thead>
             <tr className="border-b border-zinc-200 dark:border-zinc-800/60 text-xs uppercase tracking-wider text-zinc-500 bg-zinc-50/50 dark:bg-zinc-900/20">
               <th className="p-4 font-semibold">Aluno</th>
@@ -133,6 +134,7 @@ export default function CRMAlunosPage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );

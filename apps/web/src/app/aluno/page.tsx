@@ -71,7 +71,7 @@ export default async function AlunoHomePage() {
         <div className="lg:col-span-8 space-y-6">
           
           {/* CARD DE XP E NÍVEL - Estilo Clean / Tech */}
-          <div className="bg-[#0A0A0A] border border-zinc-800/60 rounded-[28px] p-8 relative overflow-hidden shadow-2xl">
+          <div className="bg-[#0A0A0A] border border-zinc-800/60 rounded-[28px] p-4 md:p-8 relative overflow-hidden shadow-2xl">
             {/* Soft Glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-zinc-800/30 blur-[80px] rounded-full pointer-events-none" />
 
@@ -189,7 +189,7 @@ export default async function AlunoHomePage() {
               <p className="text-[11px] text-zinc-500 tracking-wider uppercase mt-1">Acesso à Catraca</p>
             </div>
 
-            <div className="p-8 w-full flex flex-col items-center bg-white">
+            <div className="p-4 md:p-8 w-full flex flex-col items-center bg-white">
               <QRCode value={qrCodeValue} size={160} level="H" className="mx-auto" />
             </div>
             

@@ -104,7 +104,7 @@ export default function FinanceiroPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
         {/* Tabela de Últimas Mensalidades */}
-        <div className="lg:col-span-2 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-8 shadow-sm">
+        <div className="lg:col-span-2 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-4 md:p-8 shadow-sm">
           <h3 className="text-lg font-medium text-zinc-900 dark:text-white mb-6">Últimas Cobranças</h3>
           
           <div className="space-y-4">
@@ -145,7 +145,7 @@ export default function FinanceiroPage() {
         </div>
 
         {/* Gerenciar Planos */}
-        <div className="lg:col-span-1 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-8 shadow-sm">
+        <div className="lg:col-span-1 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-4 md:p-8 shadow-sm">
           <h3 className="text-lg font-medium text-zinc-900 dark:text-white mb-6">Meus Planos</h3>
           
           <div className="space-y-4 mb-6">

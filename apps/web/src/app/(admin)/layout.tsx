@@ -15,7 +15,7 @@ export default function AdminLayout({
         <div className="h-20 fixed w-full md:w-[calc(100%-18rem)] z-50">
           <Topbar />
         </div>
-        <div className="pt-24 p-8 h-full">
+        <div className="pt-24 p-4 md:p-8 h-full">
           {children}
         </div>
       </main>

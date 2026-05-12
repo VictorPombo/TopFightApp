@@ -28,7 +28,7 @@ export default function ProfessorDashboard() {
       {/* Turmas do Dia */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {turmasHoje.map((turma) => (
-          <div key={turma.id} className="bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-6 shadow-sm hover:border-yellow-500/30 transition-all group relative overflow-hidden">
+          <div key={turma.id} className="bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-4 md:p-6 shadow-sm hover:border-yellow-500/30 transition-all group relative overflow-hidden">
             <div className="flex justify-between items-start mb-6">
               <div className="bg-blue-500/10 text-blue-500 text-xl font-bold px-4 py-2 rounded-xl">
                 {turma.time}
@@ -63,7 +63,7 @@ export default function ProfessorDashboard() {
         
         <div className="bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] overflow-hidden shadow-sm">
           {alunosParaAvaliar.map((aluno, i) => (
-            <div key={aluno.id} className={`p-6 flex flex-col sm:flex-row items-center justify-between gap-6 ${i !== 0 ? "border-t border-zinc-100 dark:border-zinc-800" : ""}`}>
+            <div key={aluno.id} className={`p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-6 ${i !== 0 ? "border-t border-zinc-100 dark:border-zinc-800" : ""}`}>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center font-bold text-lg text-zinc-500">
                   {aluno.name.charAt(0)}

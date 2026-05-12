@@ -87,7 +87,7 @@ export default async function AdminDashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-8">
         
         {/* Ações Rápidas */}
-        <div className="lg:col-span-8 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-8 shadow-sm">
+        <div className="lg:col-span-8 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-4 md:p-8 shadow-sm">
           <div className="flex items-center gap-2 mb-6">
             <TrendingUp className="h-5 w-5 text-yellow-500" />
             <h3 className="text-lg font-medium text-zinc-900 dark:text-white">
@@ -119,7 +119,7 @@ export default async function AdminDashboard() {
         </div>
 
         {/* Alertas */}
-        <div className="lg:col-span-4 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-8 shadow-sm">
+        <div className="lg:col-span-4 bg-white dark:bg-[#0A0A0A] border border-zinc-200 dark:border-zinc-800/60 rounded-[24px] p-4 md:p-8 shadow-sm">
           <div className="flex items-center gap-2 mb-6">
             <AlertTriangle className="h-5 w-5 text-orange-500" />
             <h3 className="text-lg font-medium text-zinc-900 dark:text-white">
