@@ -29,7 +29,7 @@ export default function LandingPage() {
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
             <a href="#solucoes" className="hover:text-white transition-colors">Soluções</a>
-            <a href="#funcionalidades" className="hover:text-white transition-colors">Ecossistema</a>
+            <a href="#funcionalidades" className="hover:text-white transition-colors">Tudo que fazemos</a>
             <a href="#app" className="hover:text-white transition-colors">App do Aluno</a>
           </div>
           <div className="flex items-center gap-4">
@@ -61,17 +61,17 @@ export default function LandingPage() {
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-[1.1]">
             Não venda apenas treinos.<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-              Venda pertencimento.
+              Venda o sentimento de pertencer.
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            O primeiro ERP verticalizado do mundo desenhado exclusivamente para academias de artes marciais. Da catraca biométrica à gamificação de faixas, centralizamos toda a sua operação.
+            O primeiro sistema do mundo feito exclusivamente para academias de artes marciais. Da entrada do aluno até a troca de faixa, nós organizamos tudo para você focar no tatame.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/admin" className="w-full sm:w-auto bg-yellow-500 text-black px-8 py-4 rounded-full font-black text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(234,179,8,0.3)]">
-              Explorar Plataforma <ArrowRight className="h-5 w-5" />
+              Explorar Sistema <ArrowRight className="h-5 w-5" />
             </Link>
             <Link href="/aluno" className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
               <Smartphone className="h-5 w-5" /> Visão do Aluno
@@ -101,8 +101,8 @@ export default function LandingPage() {
       <section id="solucoes" className="py-24 px-6 bg-black relative border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">Um Ecossistema <span className="text-yellow-500">Completo</span></h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto">Tudo que sua academia precisa para crescer, reter alunos e automatizar o faturamento em uma única tela.</p>
+            <h2 className="text-3xl md:text-5xl font-black mb-4">Tudo no <span className="text-yellow-500">Mesmo Lugar</span></h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">Esqueça usar várias planilhas. Tudo que sua academia precisa para crescer, manter os alunos felizes e cuidar do dinheiro.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[240px]">
@@ -110,8 +110,8 @@ export default function LandingPage() {
             {/* Box 1: Gamificação */}
             <Link href="/aluno/evolucao" className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-zinc-900 to-[#0A0A0A] border border-white/5 rounded-[32px] p-8 relative overflow-hidden group hover:border-yellow-500/30 transition-colors">
               <Trophy className="h-10 w-10 text-yellow-500 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Gamificação e Faixas</h3>
-              <p className="text-zinc-400">Sistema automático de XP, badges, histórico de exames e elegibilidade de graduação. O aluno vicia em evoluir.</p>
+              <h3 className="text-2xl font-bold mb-2">Recompensas e Faixas</h3>
+              <p className="text-zinc-400">O aluno ganha pontos ao treinar e acompanha pelo celular quanto falta para a próxima faixa. Ele vicia em evoluir no tatame.</p>
               <div className="absolute bottom-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">
                 <ArrowRight className="h-8 w-8 text-yellow-500" />
               </div>
@@ -120,8 +120,8 @@ export default function LandingPage() {
             {/* Box 2: IA de Churn */}
             <Link href="/admin/relatorios" className="md:col-span-1 lg:col-span-2 bg-gradient-to-br from-red-950/20 to-black border border-white/5 rounded-[32px] p-8 relative overflow-hidden group hover:border-red-500/30 transition-colors">
               <Activity className="h-10 w-10 text-red-500 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">IA de Retenção (Churn)</h3>
-              <p className="text-zinc-400">Algoritmo detecta quando o aluno está perdendo o engajamento e alerta para você agir antes dele cancelar a matrícula.</p>
+              <h3 className="text-2xl font-bold mb-2">Prevenção de Cancelamentos</h3>
+              <p className="text-zinc-400">O sistema avisa automaticamente quando um aluno está sumindo dos treinos, para você mandar mensagem antes dele cancelar.</p>
               <AlertMock />
             </Link>
 
@@ -129,8 +129,8 @@ export default function LandingPage() {
             <Link href="/admin/financeiro" className="md:col-span-1 lg:col-span-1 bg-gradient-to-br from-emerald-950/20 to-black border border-white/5 rounded-[32px] p-8 relative hover:border-emerald-500/30 transition-colors flex flex-col justify-between">
               <div>
                 <BarChart3 className="h-8 w-8 text-emerald-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2">ERP Financeiro</h3>
-                <p className="text-sm text-zinc-400">Gestão de MRR, cobrança via PIX e boletos automáticos.</p>
+                <h3 className="text-xl font-bold mb-2">Financeiro Completo</h3>
+                <p className="text-sm text-zinc-400">Controle de mensalidades, cobranças automáticas via PIX e relatórios de dinheiro fácil de entender.</p>
               </div>
             </Link>
 
@@ -138,8 +138,8 @@ export default function LandingPage() {
             <Link href="/admin/loja" className="md:col-span-2 lg:col-span-1 bg-gradient-to-br from-blue-950/20 to-black border border-white/5 rounded-[32px] p-8 relative hover:border-blue-500/30 transition-colors flex flex-col justify-between">
               <div>
                 <Store className="h-8 w-8 text-blue-500 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Loja & Marketplace</h3>
-                <p className="text-sm text-zinc-400">Venda kimonos, luvas e suplementos direto no app do aluno.</p>
+                <h3 className="text-xl font-bold mb-2">Loja da Academia</h3>
+                <p className="text-sm text-zinc-400">Venda kimonos, luvas e produtos diretamente no aplicativo para o seu aluno comprar fácil.</p>
               </div>
             </Link>
 
@@ -147,8 +147,8 @@ export default function LandingPage() {
             <Link href="/admin/scanner" className="md:col-span-1 lg:col-span-2 bg-gradient-to-br from-zinc-900 to-black border border-white/5 rounded-[32px] p-8 relative overflow-hidden group hover:border-white/20 transition-colors">
               <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
               <Camera className="h-10 w-10 text-zinc-300 mb-4 relative z-10" />
-              <h3 className="text-2xl font-bold mb-2 relative z-10">Recepção Biométrica</h3>
-              <p className="text-zinc-400 relative z-10 max-w-sm">Diga adeus às roletas antigas. Use um tablet na parede para check-in via QR Code ou Reconhecimento Facial integrado ao sistema de mensalidades.</p>
+              <h3 className="text-2xl font-bold mb-2 relative z-10">Entrada Inteligente</h3>
+              <p className="text-zinc-400 relative z-10 max-w-sm">Diga adeus às roletas antigas. Use um tablet na parede para liberar a entrada com o código QR do celular do aluno.</p>
             </Link>
 
           </div>
@@ -161,7 +161,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div className="space-y-10">
-              <h2 className="text-4xl font-black leading-tight">Uma plataforma,<br/><span className="text-yellow-500">Quatro portais exclusivos.</span></h2>
+              <h2 className="text-4xl font-black leading-tight">Um sistema único,<br/><span className="text-yellow-500">feito para todos na academia.</span></h2>
               
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -169,8 +169,8 @@ export default function LandingPage() {
                     <ShieldCheck className="h-6 w-6 text-yellow-500" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1">Portal do Administrador</h4>
-                    <p className="text-zinc-400 text-sm leading-relaxed">Controle financeiro total, gestão de planos, visualização de inadimplência, loja virtual, CRM de vendas e dashboard com inteligência artificial para evasão.</p>
+                    <h4 className="text-xl font-bold mb-1">Para o Dono da Academia</h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">Controle total do dinheiro, cadastro de planos, relatórios fáceis de ver e avisos de quem está com mensalidade atrasada ou sumindo dos treinos.</p>
                   </div>
                 </div>
 
@@ -179,8 +179,8 @@ export default function LandingPage() {
                     <Users className="h-6 w-6 text-blue-500" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1">Portal do Professor</h4>
-                    <p className="text-zinc-400 text-sm leading-relaxed">Na beira do tatame: lista de chamada no celular, aprovação de graduações, feedback de atletas e histórico de desempenho em campeonatos.</p>
+                    <h4 className="text-xl font-bold mb-1">Para o Professor</h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">Ele usa o celular no tatame para fazer chamada, aprovar novas faixas e acompanhar como os alunos estão indo nas lutas.</p>
                   </div>
                 </div>
 
@@ -189,8 +189,8 @@ export default function LandingPage() {
                     <Smartphone className="h-6 w-6 text-emerald-500" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1">App do Aluno</h4>
-                    <p className="text-zinc-400 text-sm leading-relaxed">Grade de aulas, check-in, evolução de faixas, gamificação (XP), rede social interna da academia, pagamento integrado e loja virtual.</p>
+                    <h4 className="text-xl font-bold mb-1">Para o Aluno</h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">O aplicativo onde ele reserva o treino, vê os pontos que ganhou, interage com os amigos nas notícias e pode pagar a mensalidade.</p>
                   </div>
                 </div>
 
@@ -199,8 +199,8 @@ export default function LandingPage() {
                     <Users className="h-6 w-6 text-purple-500" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1">Área do Responsável</h4>
-                    <p className="text-zinc-400 text-sm leading-relaxed">Conta Família. Os pais acompanham a frequência, comportamento, evolução técnica das crianças e pagam todas as mensalidades em um clique.</p>
+                    <h4 className="text-xl font-bold mb-1">Para os Pais e Responsáveis</h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">Área especial para quem paga a conta. Os pais veem se a criança não faltou no treino, se ganhou faixa nova e pagam a conta tudo em um só lugar.</p>
                   </div>
                 </div>
               </div>
